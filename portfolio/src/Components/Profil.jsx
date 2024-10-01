@@ -5,7 +5,7 @@ function Profil() {
         <div className="profil">
             <img
                 className="profil-picture"
-                src="portfolio/public/Images/profile-pic.png"
+                src="/Images/profile-pic.png"
                 alt="Profil image"/>
             <div className="name">
                 Nicolas Massaia
