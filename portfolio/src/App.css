@@ -1,0 +1,346 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 18px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  background-color: #130d31;
+  color: rgb(148, 163, 184);
+}
+
+.left-section, .right-section {
+  padding: 20px;
+  overflow-y: auto; /* Pour permettre le scroll si le contenu dépasse la taille de l'écran */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column; /* Stack Profil et NavCustom verticalement */
+  justify-content: space-between; /* Aligner les éléments en haut */
+  background-color: #1f1b4a; /* Couleur de fond pour la section de gauche */
+}
+
+
+.right-section {
+  background-color: #130d31; /* Couleur de fond pour la section de droite */
+  padding-left: 7%;
+}
+
+
+.main {
+  padding: 1%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.section {
+  padding: 100px 20px; /* Ajouter de l'espace autour des sections */
+  height: 100vh; /* Permet de voir l'effet de scrolling sur toute la section */
+}
+
+.profil {
+  margin-bottom: 10%;
+  margin-left: 5%;
+  padding-right: 20%;
+}
+
+.nav-link {
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  color: #ccc; /* Couleur de texte par défaut */
+  transition: color 0.3s ease, transform 0.3s ease; /* Ajoute une transition */
+  padding: 10px 15px;
+  position: relative; /* Nécessaire pour le positionnement du pseudo-élément */
+}
+
+.nav-link span {
+  position: relative; /* Positionnement relatif pour le texte */
+  display: inline-block; /* Pour que le soulignement ne prenne que l'espace du texte */
+}
+
+.nav-link:hover span {
+  color: #fff; /* Change la couleur au survol */
+  transform: scale(1.1); /* Grossissement au survol */
+  border-bottom: 2px outset #fff;
+}
+
+
+.nav-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  margin-bottom: 5px;
+}
+
+.nav-custom ul {
+  padding: 0;
+  margin-left: 5%;
+}
+
+.nav-custom ul li {
+  list-style-type: none;
+}
+
+.nav-custom ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0;
+}
+
+.skill-section, .my-story, .my-experience, .certifications-section {
+  margin-bottom: 40px; /* Espacement entre les sections dans la colonne de droite */
+}
+
+.skill-section h2, .my-story h2, .my-experience h2, .certifications-section h2, .works-section h2 {
+  margin-bottom: 20px;
+  color: rgba(250, 250, 250, 0.945);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spanTitleH2{
+  background: #1f1b4a;
+  height: 35px;
+  width: 35px;
+  color: rgba(255, 255, 255, 0.945);
+  border-radius: 50%;
+
+  font-size: .845rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certifications-section {
+  width: 100%;
+}
+
+#works{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.works-section{
+  text-align: center;
+  width:80%
+}
+
+.my-story {
+  grid-column: 2 / 2;
+  grid-row: 1;
+  padding-right: 12%;
+  margin-top: 5%;
+}
+
+.my-experience {
+  margin-right: 10%;
+}
+
+.experience {
+  border-top-color: rgba(250,250,250, .4) ;
+  border-top-width: 1px;
+  border-top-style: solid;
+  margin-top: 4%;
+  padding-top: 1%;
+}
+
+.profil-picture {
+  width: 20%;
+}
+
+.tag {
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: rgb(107, 194, 208);
+  margin-right: 0; /* Supprime l'ancienne marge droite */
+}
+
+
+.work-language {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  gap: 0.5rem; /* Ajoute un espace entre les tags */
+}
+
+.skill-section {
+  color: rgb(148, 163, 184);
+}
+
+.skill-list {
+  list-style-type: none;
+  border: 1px solid rgba(250, 250, 250, 0.4);
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr 1fr 1fr;
+}
+
+
+.skill-item {
+  display: flex; /* Utilise Flexbox pour le conteneur */
+  flex-direction: column; /* Aligne les éléments en colonne */
+  align-items: center; /* Centre horizontalement */
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+.skill-name {
+  margin-bottom: 2%;
+  display: block; /* Permet au texte de prendre toute la largeur */
+  text-align: center; /* Centre le texte */
+}
+
+.skill-stars {
+  display: flex;
+  gap: 5px;
+  justify-content: center; /* Centre les étoiles */
+}
+
+.skill-stars svg:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+.certification-name {
+  flex-grow: 2; /* Laisse plus d'espace à la certificationName */
+}
+
+.certification-list {
+  list-style-type: none;
+  border: 1px solid rgba(250, 250, 250, 0.4);
+  padding: 15px;
+  border-radius: 10px;
+
+}
+
+.certification-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.certification-date, .certification-name, .certification-city {
+  flex-basis: 30%;
+  text-align: left;
+}
+
+.duration {
+  padding: 1px;
+  font-size: .845rem;
+}
+.work-information {
+  padding: 1px;
+  font-weight: 700;
+  color: rgba(250,250,250, .9);
+}
+
+.work-place {
+  padding: 1px;
+}
+
+.work-task {
+  padding: 1% 3% 2%;
+  margin: 0;
+}
+
+.work-description {
+  padding: 1px;
+}
+
+.work-list{
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contact-section {
+  margin-left: 5%;
+  margin-top: auto; /* Pousse la section de contact vers le bas */
+  justify-content: center;
+  display: flex;
+}
+
+.contactList {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Supprime le padding */
+  margin: 0; /* Supprime la marge */
+  display: flex; /* Utilise Flexbox pour l'alignement horizontal */
+  flex-direction: row; /* Aligne les éléments en ligne */
+  gap: 15px; /* Espace entre les éléments */
+}
+
+.contact-item {
+  display: flex; /* Utilise Flexbox pour le conteneur de chaque élément */
+  align-items: center; /* Centre verticalement le texte et l'icône */
+  padding-bottom: 4px;
+}
+
+.contact-item a {
+
+  text-decoration: none; /* Supprime le soulignement du lien */
+  color: inherit; /* Adopte la couleur du texte environnant */
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #130d31;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title{
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #130d31;
+  padding:0;
+  margin:0;
+}
