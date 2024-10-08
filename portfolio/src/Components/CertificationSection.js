@@ -1,6 +1,6 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAward} from "@fortawesome/free-solid-svg-icons";
+import {faAward, faBriefcase, faCertificate} from "@fortawesome/free-solid-svg-icons";
 
 function CertificationSection() {
 
@@ -31,7 +31,7 @@ function CertificationSection() {
 
     return (
         <div className="certifications-section">
-            <h2><span className="spanTitleH2"><FontAwesomeIcon icon={faAward} /></span>Mes Certifications</h2>
+            <h2><span className="spanTitleH2" id="faBriefcase" ><FontAwesomeIcon icon={faBriefcase} /></span>Mes Certifications</h2>
             <div className="certification-list">
                 {dataCertification.map((certification, index) => (
                     <div key={index} className="certification-item">

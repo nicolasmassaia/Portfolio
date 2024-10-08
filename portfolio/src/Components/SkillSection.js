@@ -37,11 +37,11 @@ function SkillSection() {
 
     return (
         <div className="skill-section">
-            <h2><span className="spanTitleH2" ><FontAwesomeIcon icon={faWrench} /></span>Mes Compétences</h2>
+            <h2><span className="spanTitleH2" id="faWrench"><FontAwesomeIcon icon={faWrench} /></span>Mes Compétences</h2>
             <ul className="skill-list">
                 {skills.map((skill, index) => (
                     <li key={index} className="skill-item">
-                        <span className="skill-name"><FontAwesomeIcon icon={skill.fontName} style={{ paddingRight: '2px' }} />{skill.language}</span>
+                        <span className="skill-name"> <FontAwesomeIcon icon={skill.fontName} style={{ paddingRight: '2px' }} />{skill.language}</span>
                         <span className="skill-stars">{renderStars(skill.level)}</span>
 
                         <FontAwesomeIcon icon="fa-brands fa-docker"/>
