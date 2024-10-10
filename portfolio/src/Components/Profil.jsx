@@ -6,7 +6,6 @@ function Profil() {
             <img
                 className="profil-picture"
                 src="/Images/profile-pic.png"
-                /* eslint-disable-next-line jsx-a11y/img-redundant-alt */
                 alt="Profil image"/>
             <div className="name">
                 Nicolas Massaia
