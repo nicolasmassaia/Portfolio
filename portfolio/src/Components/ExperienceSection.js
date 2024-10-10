@@ -1,6 +1,6 @@
 import React from 'react';
-import {Flag, Segment} from 'semantic-ui-react'
-import {faAward, faBolt} from "@fortawesome/free-solid-svg-icons";
+import {Flag} from 'semantic-ui-react'
+import {faBolt} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function ExperienceSection() {
@@ -71,7 +71,7 @@ function ExperienceSection() {
     return (
         <div className="my-experience">
             <h2> <span className="spanTitleH2" id="faBolt" ><FontAwesomeIcon icon={faBolt} /></span>Mon expérience:</h2>
-            {dataExperience.map((experience, experienceIndex) => (
+            {dataExperience.map((experience) => (
                 <div className="experience" key={experience.id}>
                     <div className="work-information">
                         {experience.workInformation}
