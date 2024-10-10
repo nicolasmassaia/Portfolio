@@ -13,6 +13,7 @@ import {Contact} from "./Components/Contact";
 function App() {
   // Suivi de la position de la souris et du scroll
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  /* eslint-disable-next-line no-unused-vars */
   const [scrolling, setScrolling] = useState(false);
   const [scrollTimeout, setScrollTimeout] = useState(null);
 
