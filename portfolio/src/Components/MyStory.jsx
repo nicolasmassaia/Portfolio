@@ -13,7 +13,7 @@ function MyStory() {
             </p>
             <p>
                 Pendant mon temps libre, je travaille sur un jeu de cartes en Python avec la bibliothèque Pygame. Cette
-                activité me permet d'assimiler de nouvelles connaissances tout en m'amusant. Peux-être sera-t'il un jour publié sur Steam.
+                activité me permet d'assimiler de nouvelles connaissances tout en m'amusant. Peut-être sera-t'il un jour publié sur Steam.
             </p>
         </div>
     );
