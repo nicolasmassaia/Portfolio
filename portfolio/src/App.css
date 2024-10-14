@@ -267,6 +267,10 @@ html {
     text-align: left;
 }
 
+.certification-city{
+    text-align: center !important;
+}
+
 .duration {
     padding: 1px;
     font-size: .845rem;
