@@ -20,6 +20,8 @@ function App() {
   const updateLightPosition = (clientX, clientY) => {
     const scrollX = window.scrollX || 0;
     const scrollY = window.scrollY || 0;
+    const newX = clientX + scrollX;
+    const newY = clientY + scrollY;
     setMousePosition({ x: clientX + scrollX, y: clientY + scrollY });
   };
 
@@ -54,7 +56,7 @@ function App() {
 
   // Style pour l'effet de lumière suivant la souris
   const lightStyle = {
-    position: 'absolute',
+    position: 'fixed',
     top: mousePosition.y - 10 + 'px',
     left: mousePosition.x + 'px',
     width: '300px',
