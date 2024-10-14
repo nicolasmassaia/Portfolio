@@ -45,11 +45,6 @@ html {
     grid-auto-rows: minmax(100px, auto);
 }
 
-.section {
-    padding: 100px 20px; /* Ajouter de l'espace autour des sections */
-    height: 100vh; /* Permet de voir l'effet de scrolling sur toute la section */
-}
-
 .profil {
     margin-bottom: 10%;
     margin-left: 5%;
