@@ -9,6 +9,8 @@ import CertificationSection from "./Components/CertificationSection";
 import MyWorkSection from "./Components/MyWorkSection";
 import 'semantic-ui-css/semantic.min.css'
 import {Contact} from "./Components/Contact";
+import {faCircleXmark} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function App() {
     // Suivi de la position de la souris et du scroll
@@ -54,7 +56,7 @@ function App() {
         };
     }, [mousePosition, scrollTimeout]);
 
-    // Style pour l'effet de lumière suivant la souris
+    // lighter
     const lightStyle = {
         position: 'fixed',
         top: mousePosition.y - 10 + 'px',
@@ -68,20 +70,64 @@ function App() {
         transform: 'translate(-50%, -50%)',
     };
 
+    /** Start: mobile **/
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 900);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const rightSectionStyle = {
+        backgroundColor: isMenuOpen ? 'rgba(128, 128, 128, 0.5)' : 'transparent',
+        transition: 'background-color 0.3s ease' // Ajoute une transition douce
+    };
+
+    const handleClickRightSection = () => {
+        if (isMenuOpen) {
+            setIsMenuOpen(false); // Ferme le menu
+        }
+    };
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    /** End: mobile **/
     return (
         <div className="app">
-            {/* Lumière dynamique */}
+            {/* div light effect */}
             <div style={lightStyle}></div>
-
+            {/* Menu burger button */}
+            {(isMobile) && (
+                <button className="burger-menu-button" onClick={toggleMenu}>
+                    ☰
+                </button>
+            )}
             {/* Section de gauche */}
-            <div className="left-section">
-                <Profil/>
-                <NavCustom/>
-                <Contact/>
-            </div>
+            {(!isMobile) || (isMenuOpen) ? (
+                <div className="left-section">
+                    <Profil/>
+                    <NavCustom/>
+                    <Contact/>
+                </div>
+            ) : null}
 
             {/* Section de droite */}
-            <div className="right-section">
+            <div className="right-section" style={rightSectionStyle} onClick={handleClickRightSection}>
+                {isMenuOpen && (
+                    <button className="button-close-menu" onClick={closeMenu}>
+                        <FontAwesomeIcon icon={faCircleXmark} />
+                    </button>
+                )}
                 <div id="about">
                     <MyStory/>
                 </div>

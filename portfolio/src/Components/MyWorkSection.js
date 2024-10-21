@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { faChevronLeft, faChevronRight, faPaintRoller} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Modal} from "./Modal";
@@ -16,10 +16,15 @@ function MyWorkSection() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isModalOpen, setModalOpen] = useState(false);
     const [selectedWork, setSelectedWork] = useState(null);
-
-
-    const itemsPerPage = 3;
+    const [itemsPerPage, setItemsPerPage] = useState();
     const totalPages = Math.ceil(dataWork.length / itemsPerPage);
+    const updateItemsPerPage = () => {
+        if (window.innerWidth > 1080) {
+            setItemsPerPage(3);
+        } else {
+            setItemsPerPage(2);
+        }
+    };
 
     const goToNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
@@ -38,6 +43,15 @@ function MyWorkSection() {
         setModalOpen(false);
         setSelectedWork(null);
     };
+
+    useEffect(() => {
+        updateItemsPerPage();
+        window.addEventListener('resize', updateItemsPerPage);
+
+        return () => {
+            window.removeEventListener('resize', updateItemsPerPage);
+        };
+    }, []);
 
     return (
         <>

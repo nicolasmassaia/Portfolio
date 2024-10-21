@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaStar, FaRegStar } from 'react-icons/fa'; // Pour les étoiles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Pour les icônes FontAwesome
-import { faJs, faReact, faHtml5, faCss3, faPhp, faSymfony, faDocker, faGitlab } from '@fortawesome/free-brands-svg-icons';
-import {faWrench} from "@fortawesome/free-solid-svg-icons";
+import {faJs, faReact, faHtml5, faCss3, faPhp, faSymfony, faDocker, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import {faDatabase, faWrench} from "@fortawesome/free-solid-svg-icons";
 
 function SkillSection() {
     // Liste des langages et leur niveau de maîtrise (sur 5 étoiles)
@@ -15,6 +15,7 @@ function SkillSection() {
         { language: "Symfony", level: 5, fontName: faSymfony },
         { language: "Docker", level: 2, fontName: faDocker },
         { language: "Gitlab", level: 4, fontName: faGitlab },
+        { language: " SQL/DQL", level: 4, fontName: faDatabase },
     ];
 
     // Fonction pour générer les étoiles

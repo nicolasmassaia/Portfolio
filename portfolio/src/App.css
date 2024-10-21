@@ -13,26 +13,26 @@ html {
 .app {
     display: grid;
     grid-template-columns: 30% 70%;
-    height: 100vh; /* Prend toute la hauteur de l'écran */
+    height: 100vh;
     background-color: #130d31;
     color: rgb(148, 163, 184);
 }
 
 .left-section, .right-section {
     padding: 20px;
-    overflow-y: auto; /* Pour permettre le scroll si le contenu dépasse la taille de l'écran */
+    overflow-y: auto;
 }
 
 .left-section {
     display: flex;
-    flex-direction: column; /* Stack Profil et NavCustom verticalement */
-    justify-content: space-between; /* Aligner les éléments en haut */
-    background-color: #1f1b4a; /* Couleur de fond pour la section de gauche */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1f1b4a;
 }
 
 
 .right-section {
-    background-color: #130d31; /* Couleur de fond pour la section de droite */
+    background-color: #130d31;
     padding-left: 7%;
 }
 
@@ -46,27 +46,27 @@ html {
 }
 
 .profil {
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     margin-left: 5%;
     padding-right: 20%;
 }
 
 .nav-link {
-    text-decoration: none; /* Supprime le soulignement par défaut */
-    color: #ccc; /* Couleur de texte par défaut */
-    transition: color 0.3s ease, transform 0.3s ease; /* Ajoute une transition */
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease, transform 0.3s ease;
     padding: 10px 15px;
-    position: relative; /* Nécessaire pour le positionnement du pseudo-élément */
+    position: relative;
 }
 
 .nav-link span {
-    position: relative; /* Positionnement relatif pour le texte */
-    display: inline-block; /* Pour que le soulignement ne prenne que l'espace du texte */
+    position: relative;
+    display: inline-block;
 }
 
 .nav-link:hover span {
-    color: #fff; /* Change la couleur au survol */
-    transform: scale(1.1); /* Grossissement au survol */
+    color: #fff;
+    transform: scale(1.1);
     border-bottom: 2px outset #fff;
 }
 
@@ -90,6 +90,7 @@ html {
 
 .nav-custom ul li {
     list-style-type: none;
+    font-size: 22px !important;
 }
 
 .nav-custom ul li a {
@@ -124,20 +125,24 @@ html {
     align-items: center;
 }
 
-#faBolt{
-    color:yellow;
+#faBolt {
+    color: yellow;
 }
 
-#faWrench{
+#faWrench {
     color: #A9A9A9;
 }
 
-#faBriefcase{
+#faBriefcase {
     color: #8A4E00;
 }
 
-#faPaintRoller{
+#faPaintRoller {
     color: white;
+}
+
+#faAstronaut {
+
 }
 
 .certifications-section {
@@ -164,8 +169,28 @@ html {
     font-style: italic;
 }
 
+.my-story p {
+    color: rgba(255, 255, 255, 0.945);
+    font-size: 19px;
+}
+
 .my-experience {
     margin-right: 10%;
+}
+
+.slogan {
+    margin-top: 10px;
+    font-style: italic;
+    color: rgba(250, 250, 250, .9);
+    font-size: 18px;
+}
+
+.name, .job {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgba(250, 250, 250, .9);
+    margin-top: 10px;
 }
 
 .experience {
@@ -187,14 +212,14 @@ html {
     font-weight: 500;
     line-height: 1.25rem;
     color: rgb(107, 194, 208);
-    margin-right: 0; /* Supprime l'ancienne marge droite */
+    margin-right: 0;
 }
 
 
 .work-language {
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    gap: 0.5rem; /* Ajoute un espace entre les tags */
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .skill-section {
@@ -213,9 +238,9 @@ html {
 
 
 .skill-item {
-    display: flex; /* Utilise Flexbox pour le conteneur */
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 10px;
     font-size: 18px;
 }
@@ -223,14 +248,14 @@ html {
 
 .skill-name {
     margin-bottom: 2%;
-    display: block; /* Permet au texte de prendre toute la largeur */
-    text-align: center; /* Centre le texte */
+    display: block;
+    text-align: center;
 }
 
 .skill-stars {
     display: flex;
     gap: 5px;
-    justify-content: center; /* Centre les étoiles */
+    justify-content: center;
 }
 
 .skill-stars svg:hover {
@@ -239,7 +264,7 @@ html {
 }
 
 .certification-name {
-    flex-grow: 2; /* Laisse plus d'espace à la certificationName */
+    flex-grow: 2;
 }
 
 .certification-list {
@@ -262,13 +287,14 @@ html {
     text-align: left;
 }
 
-.certification-city{
+.certification-city {
     text-align: center !important;
 }
 
 .duration {
     padding: 1px;
     font-size: .845rem;
+    margin-top: 5px;
 }
 
 .work-information {
@@ -279,7 +305,8 @@ html {
 
 .work-place {
     padding: 1px;
-    color:white;
+    color: white;
+    margin-top: 5px;
 }
 
 .work-task {
@@ -289,9 +316,9 @@ html {
 
 .work-description {
     padding: 1px;
-    color:white;
+    color: white;
     font-style: italic;
-    margin-top:2px;
+    margin-top: 2px;
 }
 
 .work-list {
@@ -308,37 +335,38 @@ html {
 
 .contact-section {
     margin-left: 5%;
-    margin-top: auto; /* Pousse la section de contact vers le bas */
+    margin-top: auto;
     justify-content: center;
     display: flex;
 }
 
 .contactList {
-    list-style-type: none; /* Supprime les puces */
-    padding: 0; /* Supprime le padding */
-    margin: 0; /* Supprime la marge */
-    display: flex; /* Utilise Flexbox pour l'alignement horizontal */
-    flex-direction: row; /* Aligne les éléments en ligne */
-    gap: 15px; /* Espace entre les éléments */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 .contact-item {
-    display: flex; /* Utilise Flexbox pour le conteneur de chaque élément */
-    align-items: center; /* Centre verticalement le texte et l'icône */
+    display: flex;
+    align-items: center;
     padding-bottom: 4px;
 }
 
 .contact-item a {
 
-    text-decoration: none; /* Supprime le soulignement du lien */
-    color: inherit; /* Adopte la couleur du texte environnant */
+    text-decoration: none;
+    color: inherit;
 }
 
 .carousel-wrapper {
-    position: relative;
+    display: flex;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .carousel-container {
@@ -347,43 +375,40 @@ html {
     justify-content: center;
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Limite la largeur maximale du carrousel */
+    max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* Coupe tout ce qui dépasse la largeur du carrousel */
+    overflow: hidden;
 }
 
 
 .carousel {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour afficher 3 cartes */
-    gap: 25px; /* Espace entre les cartes */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
     width: 90%;
     transition: transform 0.5s ease-in-out;
-    margin: 20px; /* Ajoute une marge pour permettre l'agrandissement */
+    margin: 20px;
 }
 
 .card {
-    background-color: #453c95; /* Couleur de fond de la carte */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: #453c95;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: solid 1px #453c95;
-    text-align: center; /* Alignement du texte */
-    transition: transform 0.3s ease; /* Transition pour l'agrandissement */
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
 }
 
-/* Effet d'agrandissement au survol */
 .card:hover {
-    transform: scale(1.1); /* Agrandissement de 5% */
+    transform: scale(1.1);
     cursor: grab;
 }
 
 .card-image {
-    max-width: 300px;
-    min-width: 300px;
-    max-height: 200px;
-    min-height: 200px;
-    border-top-left-radius: 8px; /* Arrondi en haut à gauche */
-    border-top-right-radius: 8px; /* Arrondi en haut à droite */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
 }
 
 .card-title {
@@ -394,27 +419,18 @@ html {
 }
 
 .carousel-button {
-    color: white; /* Couleur des icônes */
-    background: none; /* Pas de fond pour les boutons */
-    border: none; /* Pas de bordure */
-    font-size: 2rem; /* Taille des icônes */
-    cursor: pointer; /* Curseur de type 'pointer' pour le hover */
-    position: absolute;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 }
 
-.carousel-button.left {
-    left: -15px;
-}
-
-.carousel-button.right {
-    right: -10px;
-}
-
 .carousel-button:hover {
-    color: #f1c40f; /* Change la couleur des flèches au hover */
+    color: #f1c40f;
 }
 
 
@@ -461,9 +477,9 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 80vh; /* Hauteur maximale */
-    overflow-y: auto; /* Permet le défilement vertical */
-    padding: 20px; /* Ajout d'un padding pour le contenu */
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
 }
 
 
@@ -483,3 +499,120 @@ html {
 .modal-description {
     margin-top: 2px;
 }
+
+@media (max-width: 1080px) {
+    .nav-custom .nav-ul .nav-item {
+        list-style-type: none;
+        font-size: 16px !important;
+        margin-bottom: 0;
+    }
+
+    .my-story p {
+        font-size: 16px !important;
+    }
+
+    .right-section {
+        font-size: 16px;
+    }
+
+    .name, .job {
+        font-size: 16px !important;
+    }
+
+    .app {
+        grid-template-columns: 20% 80% ;
+    }
+
+    .profil-picture {
+        width: 100%;
+    }
+
+    .slogan {
+        font-size: 15px !important;
+    }
+
+    .carousel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .app {
+        grid-template-columns: unset;
+    }
+
+    .profil-picture-parent{
+        display: flex;
+        justify-content: center;
+    }
+
+    .profil{
+        padding-right: 0;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .profil-picture{
+        width: 60%;
+    }
+
+    .certifications-section span {
+        padding-right: 20px;
+    }
+
+    .skill-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .burger-menu-button {
+        position: absolute;
+        background-color: transparent;
+        color:white;
+        font-size: 40px;
+        border: none;
+        top: 2%;
+        right: 5%;
+
+    }
+
+    .left-section {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        z-index:200
+    }
+
+    .right-section {
+        display: initial;
+        width: 100%;
+    }
+
+    .certification-list {
+        padding: 2px;
+    }
+
+    .button-close-menu{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        background-color: transparent;
+        color:white;
+        border: none;
+        cursor: pointer;
+        z-index: 201;
+        font-size: 24px
+    }
+
+    #faBriefcase{
+        padding:0;
+    }
+
+}
+
+
+

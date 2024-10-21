@@ -3,10 +3,12 @@
 function Profil() {
     return (
         <div className="profil">
+            <div className="profil-picture-parent">
             <img
                 className="profil-picture"
                 src="/Images/profile-pic.png"
                 alt="Profil image"/>
+            </div>
             <div className="name">
                 Nicolas Massaia
             </div>
