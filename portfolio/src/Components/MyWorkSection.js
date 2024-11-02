@@ -19,10 +19,14 @@ function MyWorkSection() {
     const [itemsPerPage, setItemsPerPage] = useState();
     const totalPages = Math.ceil(dataWork.length / itemsPerPage);
     const updateItemsPerPage = () => {
-        if (window.innerWidth > 1080) {
+        const width = window.innerWidth;
+
+        if (width > 1080) {
             setItemsPerPage(3);
-        } else {
+        } else if (width > 900) {
             setItemsPerPage(2);
+        } else {
+            setItemsPerPage(1);
         }
     };
 
